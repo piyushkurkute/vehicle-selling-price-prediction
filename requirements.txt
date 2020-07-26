@@ -11,9 +11,11 @@ joblib==0.16.0
 jsonify==0.5
 MarkupSafe==1.1.1
 numpy==1.19.1
+pywin32==227
 requests==2.24.0
 scikit-learn==0.23.1
 scipy==1.5.2
+six==1.15.0
 sklearn==0.0
 threadpoolctl==2.1.0
 urllib3==1.25.10
