@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Used vehicle price prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/app_css.css">
+    <link rel="shortcut icon" href="#">
+    <script src="static/app_js.js"></script>
+  </head>
+  <body>
+  	<div class="page"></div>
+  	<form name="myform" id="myform" method="POST">
+  		<div class="header">
+  			<h2>Used vehicle price prediction</h2>
+  		</div>
+  		<div class="div_msg" id="div_msg">
+		</div>
+	    <div class="div_outer">
+	    	<label>Present Showroom Price</label>
+	    	<div>
+	    		<input type="text" name="present_price" id="present_price">
+	    	</div>
+	    </div>
+	    <div class="div_outer">
+	    	<label>Kms Driven</label>
+	    	<div>
+	    		<input type="text" name="kms_driven" id="kms_driven">
+	    	</div>
+	    </div>
+	    <div class="div_outer">
+	    	<label>Year</label>
+	    	<div>
+	    		<input type="text" name="year" id="year">
+	    	</div>
+	    </div>
+	    <div class="div_outer">
+	    	<label>No.previous owners</label>
+	    	<div>
+	    		<input type="text" name="owner" id="owner">
+	    	</div>
+	    </div>
+	    <div class="div_types" style="margin-top: 170px;">
+	    	<label class="lbl_types">Fuel Type</label>
+	    	<div class="bt_radio">
+				<input type="radio" name="fuel_type" value="diesel" id="fuel_type_diesel">
+				<label for="fuel_type_diesel">Diesel</label>
+				<input type="radio" name="fuel_type" value="petrol" id="fuel_type_petrol">
+				<label for="fuel_type_petrol">Petrol</label>
+				<input type="radio" name="fuel_type" value="cng" id="fuel_type_cng">
+				<label for="fuel_type_cng">CNG</label>
+	    	</div>
+	    </div>
+	    <div class="div_types">
+	    	<label class="lbl_types">Transmission Type</label>
+			<div class="bt_radio">
+				<input type="radio" name="transmission_type" value="automatic" id="transmission_type_automatic">
+				<label for="transmission_type_automatic">Automatic</label>
+				<input type="radio" name="transmission_type" value="manual" id="transmission_type_manual">
+				<label for="transmission_type_manual">Manual</label>
+			</div>
+	    </div>
+	    <div class="div_types">
+	    	<label class="lbl_types">Seller Type</label>
+			<div class="bt_radio">
+				<input type="radio" name="seller_type" value="dealer" id="seller_type_dealer">
+				<label for="seller_type_dealer">Dealer</label>
+				<input type="radio" name="seller_type" value="individual" id="fuel_type_individual">
+				<label for="fuel_type_individual">Individual</label>
+			</div>
+	    </div>
+	    <div class="div_submit">
+	    	<input type="submit" class="submit" id="submit" value="PREDICT PRICE">
+	    </div>
+	    <div class="div_clear">
+	    	<input type="reset" class="clear"  value="CLEAR FIELDS">
+	    </div>
+	    <br><br>
+	</form>
+  </body>
+</html>
