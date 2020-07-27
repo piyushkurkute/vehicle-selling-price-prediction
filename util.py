@@ -29,7 +29,7 @@ def setData(request_data):
 	vals = np.zeros(len(__columns)).astype(int).reshape(1,len(__columns))
 	__predDf = pd.DataFrame(data=vals, columns=__columns)
 
-	__predDf['present_price'] = float(request_data['present_price'])
+	__predDf['present_price'] = float(request_data['present_price']) / 100000
 	__predDf['kms_driven'] = int(request_data['kms_driven'])
 	__predDf['owner'] = int(request_data['owner'])
 	__predDf['no_year'] = int(2020 - int(request_data['year']))
@@ -52,5 +52,5 @@ def predictSellingPrice(request_data):
 	loadModelData()
 	setData(request_data)
 	predicted_price = __model.predict(__predDf)
-	predicted_price = round(float(predicted_price), 2)
+	predicted_price = round(float(predicted_price) * 100000)
 	return predicted_price
