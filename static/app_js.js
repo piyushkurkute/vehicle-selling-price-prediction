@@ -1,4 +1,16 @@
+function checkWindowSize(){
+	$('#page').show();
+	if($(window).width()<500) {
+		$('#page').hide();
+	}
+}
+
 $(document).ready(function(){
+	checkWindowSize();
+	$(window).resize(function(){
+		checkWindowSize();
+	});
+
 	$('#submit').click(function(e){
 		e.preventDefault();
 		var present_price		= $('#present_price').val();
@@ -30,10 +42,12 @@ $(document).ready(function(){
 				var predicted_price = 'Predicted Selling Price: <strong>Rs. '+response['predicted_price']+'</strong>';
 
 				$('#div_msg').removeClass( "error" ).addClass( "success" );
+				$('html, body').animate({scrollTop: '0px'}, 0);
 				$('#div_msg').html(predicted_price);
 			},
 			error:function(e){
 				$('#div_msg').removeClass( "success" ).addClass( "error" );
+				$('html, body').animate({scrollTop: '0px'}, 0);
 				$('#div_msg').html('Error: something went wrong.');
 
 				setTimeout(function(){

@@ -10,13 +10,12 @@
 }
 form{
 	background-color: gainsboro;
-	max-width: 625px;
+	max-width: 605px;
     width: 100%;
     height: auto;
 	font-family: Roboto;
 	font-size: 18px;
 	margin:0px auto;
-	padding-bottom: 70px;
 }
 form input[type=text]{
 	font-size:1em;
@@ -36,13 +35,16 @@ select{
 .div_outer{
       display: inline-block;
       box-sizing: border-box;
-      width: 46%;
-      padding: 10px 0px 10px 25px;
+      width: 40%;
+      padding: 10px 0px 10px 0px;
       background-color: gainsboro;
       float: left;
 }
-.owner{
-	width:50%;
+.div_price,.div_year{
+	margin-left: 20px;
+}
+.div_owner{
+	width:52%;
 }
 .div_msg{
 	height: 25px;
@@ -99,15 +101,60 @@ select{
     border: solid 2px;
 }
 .div_submit, .div_clear{
+	margin-left: 125px;
+	margin-right: 35px;
+}
+.div_submit{
 	float: left;
-	margin:35px 0px 0px 88px;
+}
+.div_buttons{
+	margin-top: 10px;
+	padding: 20px 0px 20px 0px;
 }
 .submit, .clear{
-	width: 100%;
+	/*width: 100%;*/
 	background: #e09c5f;
 	color: #ffffff;
 	display: block;
 	padding: 12px 18px;
 	font-size: 0.8em;
 	border-width: 0px;
+}
+
+/*@media screen and (max-width: 600px) {*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	body{
+		background-color: gainsboro;
+	}
+	form {
+		text-align: center;
+		background-color: gainsboro;
+		width: 100%;
+		font-family: Roboto;
+		font-size: 18px;
+	}
+	.div_outer, .div_types {
+		width: -webkit-fill-available;
+		margin-top: 0px !important;
+		float: none;
+		margin: 0px;
+	}
+	.lbl_types{
+		width: 35%;
+		box-sizing: border-box;
+		float: none;
+	}
+	.bt_radio{
+		margin: 0px;
+		padding: 0px;
+  	}
+  .div_buttons {
+		margin-top: 10px;
+		text-align: -webkit-center;
+		padding: 0px 20px 0px 32px;
+	}
+	.div_submit, .div_clear{
+		margin-left: 0px;
+   		margin-right: 0px;
+	}
 }

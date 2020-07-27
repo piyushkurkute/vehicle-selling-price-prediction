@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
     <title>Used vehicle price prediction</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="static/app_css.css">
@@ -8,14 +9,14 @@
     <script src="static/app_js.js"></script>
   </head>
   <body>
-  	<div class="page"></div>
+  	<div class="page" id="page"></div>
   	<form name="myform" id="myform" method="POST">
   		<div class="header">
   			<h2>Used vehicle price prediction</h2>
   		</div>
   		<div class="div_msg" id="div_msg">
 		</div>
-	    <div class="div_outer">
+	    <div class="div_outer div_price">
 	    	<label>Present Showroom Price</label>
 	    	<div>
 	    		<input type="text" name="present_price" id="present_price">
@@ -27,13 +28,13 @@
 	    		<input type="text" name="kms_driven" id="kms_driven">
 	    	</div>
 	    </div>
-	    <div class="div_outer">
+	    <div class="div_outer div_year">
 	    	<label>Year</label>
 	    	<div>
 	    		<input type="text" name="year" id="year">
 	    	</div>
 	    </div>
-	    <div class="div_outer">
+	    <div class="div_outer div_owner">
 	    	<label>No.previous owners(excluding current one)</label>
 	    	<div>
 	    		<input type="text" name="owner" id="owner">
@@ -68,13 +69,14 @@
 				<label for="fuel_type_individual">Individual</label>
 			</div>
 	    </div>
-	    <div class="div_submit">
-	    	<input type="submit" class="submit" id="submit" value="PREDICT PRICE">
-	    </div>
-	    <div class="div_clear">
-	    	<input type="reset" class="clear"  value="CLEAR FIELDS">
-	    </div>
-	    <br><br>
+	    <div class="div_buttons">
+		    <div class="div_submit">
+		    	<input type="submit" class="submit" id="submit" value="PREDICT PRICE">
+		    </div>
+		    <div class="div_clear">
+		    	<input type="reset" class="clear"  value="CLEAR FIELDS">
+		    </div>
+		</div>
 	</form>
   </body>
 </html>
