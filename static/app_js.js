@@ -27,7 +27,7 @@ $(document).ready(function(){
 			contentType:'application/json',
 			data:user_data,
 			success:function(response){
-				var predicted_price = 'Predicted Selling Price: <strong>Rs. '+response['predicted_price']+' Lakh</strong>';
+				var predicted_price = 'Predicted Selling Price: <strong>Rs. '+response['predicted_price']+'</strong>';
 
 				$('#div_msg').removeClass( "error" ).addClass( "success" );
 				$('#div_msg').html(predicted_price);
