@@ -1,3 +1,9 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+    background: #999;
+    width: 100%;
+  }
+}
 .page{
 	background-image: url('car_img.jpg');
 	width: 100%;
@@ -10,8 +16,9 @@
 }
 form{
 	background-color: gainsboro;
-	max-width: 580px;
+	max-width: 625px;
     width: 100%;
+    height: auto;
 	font-family: Roboto;
 	font-size: 18px;
 	margin:0px auto;
@@ -35,10 +42,13 @@ select{
 .div_outer{
       display: inline-block;
       box-sizing: border-box;
-      width: 50%;
+      width: 46%;
       padding: 10px 0px 10px 25px;
       background-color: gainsboro;
       float: left;
+}
+.owner{
+	width:50%;
 }
 .div_msg{
 	height: 25px;
