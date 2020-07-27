@@ -132,7 +132,9 @@ select{
 		width: 100%;
 		font-family: Roboto;
 		font-size: 18px;
+		padding-bottom: 20px;
 	}
+	.header{font-size: 15px;}
 	.div_outer, .div_types {
 		width: -webkit-fill-available;
 		margin-top: 0px !important;
