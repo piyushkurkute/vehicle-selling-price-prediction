@@ -3,9 +3,9 @@ import pandas as pd
 import pickle
 import json
 
-__model		= None
 __columns	= None
 __predDf	= None
+__model		= pickle.load(open('vehicle_selling_price_prediction_model.pkl','rb'))
 
 # data columns: 
 # [present_price', 'kms_driven', 'owner', 'no_year', 'fuel_type_diesel',
@@ -17,9 +17,6 @@ def loadModelData():
 	if __columns == None:
 		__columns	= json.load(open('data_columns.json','r'))
 		__columns	= __columns['data_columns']
-
-	if __model == None:
-		__model = pickle.load(open('vehicle_selling_price_prediction_model.pkl','rb'))
 
 	pass
 
