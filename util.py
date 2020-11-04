@@ -17,8 +17,7 @@ def loadModelData():
 	if __columns == None:
 		__columns	= json.load(open('data_columns.json','r'))
 		__columns	= __columns['data_columns']
-
-	pass
+		
 
 def setData(request_data):
 	global __predDf
@@ -43,7 +42,6 @@ def setData(request_data):
 	if request_data['transmission_type'] == 'manual':
 		__predDf['transmission_manual'] = 1
 
-	pass
 
 def predictSellingPrice(request_data):
 	loadModelData()
