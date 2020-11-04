@@ -12,7 +12,7 @@ __model		= pickle.load(open('vehicle_selling_price_prediction_model.pkl','rb'))
 # 'fuel_type_petrol', 'seller_type_individual', 'transmission_manual']
 
 def loadModelData():
-	global __model, __columns
+	global __columns
 
 	if __columns == None:
 		__columns	= json.load(open('data_columns.json','r'))
