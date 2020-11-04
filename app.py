@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
 	return app.send_static_file('index.html')
 
-@app.route('/predictPrice', methods=['GET','POST'])
+@app.route('/predictPrice', methods=['POST'])
 def predictPrice():
 	request_data = request.get_json()
 	predictedPrice = util.predictSellingPrice(request_data)
